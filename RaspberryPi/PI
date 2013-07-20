@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Starting the PiWhatsTheTemperature client."
+sudo python PiWhatsTheTemperature.py
+echo "PiWhatsTheTemperature client is closed."

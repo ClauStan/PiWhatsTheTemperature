@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>  
+		<title>Pi, what's the temperature?</title> 
+		<link type="text/css" rel="stylesheet" href="/stylesheets/index.css" />		
+	</head>
+	<body>
+		<header>  
+			<h1>Pi, what's the temperature?</h1>  
+		</header>  
+		
+		<span id="info_status">The Raspberry Pi sensors are <b>{{available}}</b></span> <p></p>
+
+		<table id="info_table">
+			<thead>
+				<th>Temperature</th>
+				<th>Luminosity</th>
+				<th>Date</th>
+			</thead>
+			<tbody>
+			{% for info in infoList %}
+				<tr>
+					<td>{{info.temperature}}*C</td>
+					<td>{{info.luminosity}}</td>
+					<td>{{info.date}}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+
+	</body>
+	<footer>
+		<section>The latest version of the code is available <a href="https://github.com/ClauStan/PiWhatsTheTemperature">here</a>.</section>
+	</footer>
+</html>
+{% endautoescape %}
